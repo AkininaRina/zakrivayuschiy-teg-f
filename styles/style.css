@@ -46,13 +46,14 @@
 
 .header__title {
   font-size: var(--header-title-font-size);
-  font-weight: var(--text-weight);
+  font-variation-settings: "wght"700;
   line-height: 100%;
   margin-block-end: 20px;
 }
 
 .header__subtitle {
   font-size: var(--header-subtitle-font-size);
+  font-variation-settings: "wght"400;
 }
 
 .main {
@@ -107,7 +108,7 @@
     0 -1px var(--shadow-color),
     0 1px var(--shadow-color);
 
-  opacity: 1;
+  opacity: 0.5;
   z-index: 1;
   text-transform: uppercase;
 }
@@ -197,6 +198,7 @@
   transition: outline 0.3s ease;
   align-self: center;
   padding-inline: 0;
+  cursor: pointer;
 }
 
 .mix_difference {
@@ -281,6 +283,7 @@ body:has(.dialog__floppy[open]) {
 .dialog__button {
   inline-size: 100%;
   min-block-size: 38px;
+  text-transform: uppercase;
 }
 
 .dialog__label {
@@ -307,7 +310,7 @@ body:has(.dialog__floppy[open]) {
 
 @supports ((-webkit-text-stroke: 1px var(--shadow-color)) or (text-stroke: 1px var(--shadow-color))) {
   .card__label {
-    -webkit-text-stroke: 0.3px var(--shadow-color);
+    -webkit-text-stroke: 1px var(--shadow-color);
     text-stroke: 1px var(--shadow-color);
     text-shadow: none;
   }
@@ -318,8 +321,8 @@ body:has(.dialog__floppy[open]) {
 
   .header {
     margin-top: 27vw;
-    margin-bottom: 28vw;
-    block-size: 325px;
+    margin-bottom: 27vw;
+    padding-block: 119px;
   }
 
   .header__title {
